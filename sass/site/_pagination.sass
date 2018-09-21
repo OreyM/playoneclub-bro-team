@@ -1,0 +1,27 @@
+#pagination
+  display: flex
+  justify-content: center
+  align-items: center
+  >.pagination-wrap
+    .pagination-list
+      display: flex
+      align-items: center
+      .pagination-item
+        margin: 0 4px
+        .item
+          display: block
+          padding: 6px 10px
+          border-radius: 4px
+          color: $menu-color
+          transition: all .3s
+          &.pagination-arrow
+            padding-top: 4px
+          &.pagination-number
+          &.active
+            pointer-events: none
+            cursor: default
+            background-color: $sup-body-color
+            color: $sub-color
+          &:hover
+            background-color: $sup-body-color
+            color: $sub-color

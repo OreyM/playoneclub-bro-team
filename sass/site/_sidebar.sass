@@ -1,0 +1,150 @@
+#sidebar-menu
+  visibility: hidden
+  position: absolute
+  top: 0
+  width: 25vw
+  height: 100%
+  z-index: 999
+  background-color: $body-color
+  border-right: 1px solid $sub-color
+  left: calc(-25vw - 1px)
+  transition: all .3s
+  &.active
+    visibility: visible
+    left: 0
+  >.sidebar-separator
+    height: 2px
+    background-color: #ffcc17
+    margin: 12px 14px 12px 14px
+  >.sidebar-title
+    padding: 22px 14px 0px 14px
+    span
+      font-size: 32px
+      font-weight: bold
+      color: $title-color
+  >.my-profile-wrap
+    margin: 16px 0
+    padding: 8px 14px
+    background-color: $sub-color
+    .user-name
+      padding-bottom: 6px
+      span
+        font-size: rem(20px)
+        font-weight: bold
+        color: $title-color
+    .user-nick
+      display: flex
+      align-items: center
+      .user-img
+        width: 70px
+        height: 70px
+        border: 3px solid #fff
+        border-radius: 50%
+        overflow: hidden
+        img
+          width: 100%
+      .user-nick-wrap
+        margin: 0 12px
+        span
+          font-size: rem(20px)
+          color: $title-color
+  >.profile-exit
+    text-align: right
+    padding: 0 14px
+    .exit-btn
+      font-size: rem(20px)
+      color: $title-color
+      @include animationLink($sub-color, .3s, 8px, 2px)
+  >.mobile-site-menu
+    display: none
+    padding: 0 14px
+    text-align: center
+    .sidebar-menu-list
+      margin: 0 0
+      display: block
+      width: 100%
+      .sidebar-menu-item
+        padding: 10px 0px
+        a
+          font-size: rem(32px)
+          color: $title-color
+  >.sidebar-settings
+    margin: 12px 14px
+    .setting-wrap
+      display: flex
+      align-items: center
+      padding: 8px 0px
+      color: $title-color
+      i
+        font-size: rem(44px)
+      a
+        padding: 0 14px
+        font-size: rem(28px)
+        color: inherit
+
+#mobile-menu-btn
+  position: absolute
+  top: 0
+  right: -51px
+  width: 50px
+  height: 50px
+  visibility: visible
+  cursor: pointer
+  z-index: 1
+  &:before
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: #000
+    opacity: .5
+    z-index: -1
+  &.active
+    #mobile-menu-btn-border
+      visibility: hidden
+      &:before
+        visibility: visible
+        margin-top: 0
+        transform: rotate(45deg)
+      &:after
+        visibility: visible
+        margin-top: 0
+        transform: rotate(-45deg)
+  #mobile-menu-btn-border
+    position: absolute
+    top: 50%
+    margin-top: -2px
+    left: 50%
+    margin-left: -17px
+    width: 34px
+    height: 4px
+    background-color: $sub-color
+    &:before, &:after
+      content: ''
+      @extend #mobile-menu-btn-border
+      display: block
+      transition: all .5s
+    &:before
+      margin-top: -5px
+      transform: translateY(-5px)
+    &:after
+      margin-top: 1px
+      transform: translateY(5px)
+
+
+
+
+        
+#sidebar-opacity
+  transition: all .3s
+  &.detected
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    overflow: hidden
+    background-color: #1a1a1a
+    opacity: .9
+    z-index: 4

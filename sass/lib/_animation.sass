@@ -1,0 +1,49 @@
+@mixin animationLink($color, $transition, $link-padding, $link-height)
+  &.animation-link
+    position: relative
+    display: inline-block
+    padding: $link-padding 0
+    &:before, &:after
+      content: ''
+      position: absolute
+      height: $link-height
+      bottom: 0
+      background-color: $color
+      opacity: 0
+      transition: $transition
+    &.left, &.right, &.center
+      &:before
+    &.left
+      &:before
+        left: 0
+        width: 0%
+    &.right
+      &:before
+        right: 0
+        width: 0%
+    &.center
+      &:before
+        width: 100%
+        transform: scale(0)
+      &:hover
+        &:before
+          transform: scale(1)
+    &.sub-sup
+      &:before, &:after
+        left: 0
+        width: 100%
+      &:before
+        top: 0
+        transform: translateY(-$link-padding)
+      &:after
+        bottom: 0
+        transform: translateY($link-padding)
+      &:hover
+        &:before, &:after
+          opacity: 1
+          transform: translateY(0px)
+    &:hover
+      transition: color 0.3s
+      &:before
+        opacity: 1
+        width: 100%

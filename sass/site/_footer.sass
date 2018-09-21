@@ -1,0 +1,50 @@
+footer
+  display: flex
+  justify-content: center
+  margin-top: 64px
+  padding: 32px 0
+  background-color: $sup-body-color
+  >.footer-data-wrap
+    .icon-wrap
+      display: flex
+      justify-content: center
+      margin: 8px 0
+      .icon
+        .logo-link
+          display: block
+          width: 84px
+          height: 84px
+          border-radius: 50%
+          border: 4px solid $title-color
+          transition: all .5s
+          &:hover
+            box-shadow: 0 0 8px 1px $sub-color
+    .footer-menu-wrap
+      margin: 22px 0
+      padding: 4px 0
+      .footer-menu-list
+        display: flex
+        justify-content: center
+        .footer-menu-item
+          margin: 0px 16px
+          a
+            padding: 4px 6px
+            color: $title-color
+            @include animationLink($sub-color, .3s, 8px, 2px)
+    .footer-copyright-wrap
+      .copyright
+        display: flex
+        align-items: center
+        justify-content: center
+        i
+          color: $sub-color
+        span
+          padding: 0 4px
+      .our-email
+        display: flex
+        justify-content: center
+        a
+          color: $title-color
+          @include animationLink($sub-color, .3s, 8px, 2px)
+          span
+            strong

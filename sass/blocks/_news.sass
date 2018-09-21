@@ -1,0 +1,112 @@
+.news-block
+  width: 100%
+  .news-block-wrap
+    display: flex
+    flex-direction: column
+    width: 100%
+    margin-top: 14px
+    padding: 4px 0
+    >.news-block-title
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding: 14px 0
+      .title-wrap
+        padding: 2px 0
+        .title
+          font-size: rem(28px)
+      .show-all-wrap
+        display: flex
+        align-items: center
+        color: $title-color
+        transition: all .3s
+        &:hover
+          color: $sub-color
+        .i-wrap
+          i
+            font-size: 30px
+        .btn-text
+          margin-left: 8px
+.news-list-wrap
+  display: flex
+  justify-content: space-around
+  flex-wrap: wrap
+  >.news-item
+    display: flex
+    flex-direction: column
+    width: 370px
+    margin-bottom: 24px
+    border: 4px solid $body-color
+    transition: all .3s
+    &:hover
+      border: 4px solid $sub-color
+    .news-img-wrap
+      position: relative
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 370px
+      height: 275px
+      background-color: #757575
+      background-repeat: no-repeat
+      background-size: 100%
+      z-index: 2
+      &:before
+        content: 'Загружаю...'
+        display: flex
+        position: absolute
+        top: 0
+        justify-content: center
+        align-items: center
+        height: 100%
+        width: 100%
+        font-size: 24px
+        z-index: 0
+      img
+        position: relative
+        z-index: 9
+    .news-data-wrap
+      position: relative
+      display: flex
+      flex-direction: column
+      height: 199px
+      padding: 12px 12px 16px
+      background-color: $sup-body-color
+      .news-title
+        .news-link
+          display: block
+          line-height: 24px
+          color: $title-color
+          transition: all .3s
+          &:hover
+            color: $sub-color
+      .news-separator
+        border: 1px solid $sub-color
+        width: 70%
+        margin: 10px auto
+      .news-text
+        line-height: 24px
+        font-size: rem(14px)
+      .time-view-wrap
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        >.time-view
+          display: flex
+          justify-content: space-between
+          >div
+            padding: 6px 12px
+            display: flex
+            align-items: center
+            >i
+              margin-right: 8px
+              font-size: rem(22px)
+              color: $sub-color
+            >span
+              font-size: rem(12px)
+          >.time
+          >.view
+
+#all-news
+  margin-top: 100px

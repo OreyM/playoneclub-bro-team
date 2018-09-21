@@ -1,0 +1,456 @@
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1780px)
+  .hidden-1780
+    display: none !important
+
+@media only screen and (max-width : 1604px)
+  .container
+    width: 95%
+  .hidden-1600
+    display: none
+    visibility: hidden
+
+@media only screen and (max-width : 1444px)
+  .hidden-1440
+    display: none
+    visibility: hidden
+
+@media only screen and (max-width : 1430px)
+  .hidden-1400
+    display: none !important
+
+@media only screen and (max-width : 1284px)
+  .hidden-1284
+    display: none
+    visibility: hidden
+
+@media only screen and (max-width : 1200px)
+  .news-list-wrap
+    justify-content: space-around
+  .hidden-1200
+    display: none !important
+
+@media only screen and (max-width : 1140px)
+  .hidden-1140
+    display: none !important
+
+@media only screen and (max-width : 1028px)
+  .games-prewie
+    .all-games-wrap
+      .show-all-games
+        width: 200px
+
+
+@media only screen and (max-width : 860px)
+  .hidden-860
+    display: none
+  .games-block
+    .games-block-wrap
+      >.games-list-wrap
+        justify-content: space-around
+
+@media only screen and (max-width : 798px)
+  .hidden-798
+    display: none !important
+
+@media only screen and (max-width : 770px)
+  .hidden-768
+    display: none !important
+  .games-prewie
+    .all-games-wrap
+      .show-all-games
+        width: 210px
+
+/* iPad in portrait & landscape */
+@media only screen and (min-width: 768px) and (max-width : 1024px)
+  // Sidebar
+  #sidebar-menu
+    width: 36vw
+    &.active
+    >.sidebar-separator
+    >.sidebar-title
+      span
+    >.my-profile-wrap
+      .user-name
+        span
+      .user-nick
+        .user-img
+          img
+        .user-nick-wrap
+          span
+    >.profile-exit
+      .exit-btn
+    >.mobile-site-menu
+      .sidebar-menu-list
+        .sidebar-menu-item
+          a
+    >.sidebar-settings
+      .setting-wrap
+        i
+        a
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+  /**/
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+  // Settings
+  .container
+    .row
+      &.ipad-left
+        justify-content: left
+  // Home header data
+  #home-header
+    #header-info-wrapp
+      .blur
+        &:before
+      .game-img-wrap
+        &:hover
+        .game-link
+          img
+      .info-wrap
+        .title-wrap
+          .offer-title
+          .offer-sub-title
+        .simple-info-wrap
+          .item-info-wrap
+            .img-wrap
+              img
+            .simple-title-wrap
+              a
+
+  // Sidebar
+  #sidebar-menu
+    width: 50vw
+    &.active
+    >.sidebar-separator
+    >.sidebar-title
+      span
+    >.my-profile-wrap
+      .user-name
+        span
+      .user-nick
+        .user-img
+          img
+        .user-nick-wrap
+          span
+    >.profile-exit
+      .exit-btn
+    >.mobile-site-menu
+      .sidebar-menu-list
+        .sidebar-menu-item
+          a
+    >.sidebar-settings
+      .setting-wrap
+        i
+        a
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 640px)
+  // General settings
+  .hide-desctop
+    display: block
+  .hide-mobile
+    visibility: hidden
+    display: none
+  .container
+    .row
+      &.mobile-center
+        justify-content: center
+  //Menu navigation
+  #naw-wrapp
+    padding: 16px 0
+    justify-content: center
+    .user-icon-wrap
+      .user-icon
+        &:hover
+        img
+      .user-info-wrap
+        .user-name
+        .user-data
+          .user-respect
+            &.good-respect
+            &.bad-respect
+            i
+            strong
+    >.menu-wrap
+      visibility: hidden
+      display: none
+      .menu-list
+        display: flex
+        padding: 8px 6px
+        .menu-item
+          padding: 0 22px
+          a
+            color: $menu-color
+            @include animationLink($sub-color, .3s, 8px, 2px)
+          &.active
+
+  // Home header data
+  #home-header
+    justify-content: center
+    #header-info-wrapp
+      .blur
+        visibility: hidden
+        display: none
+        &:before
+      .game-img-wrap
+        margin-top: 36px
+        &:hover
+        .game-link
+          img
+      .info-wrap
+        visibility: hidden
+        display: none
+        .title-wrap
+          .offer-title
+          .offer-sub-title
+        .simple-info-wrap
+          .item-info-wrap
+            .img-wrap
+              img
+            .simple-title-wrap
+              a
+  // Sidebar
+  #sidebar-menu
+    width: 84vw
+    left: calc(-84vw - 1px)
+    &.active
+    >.sidebar-separator
+    >.sidebar-title
+      span
+    >.my-profile-wrap
+      .user-name
+        span
+      .user-nick
+        .user-img
+          img
+        .user-nick-wrap
+          span
+    >.profile-exit
+      .exit-btn
+    >.mobile-site-menu
+      display: flex
+      .sidebar-menu-list
+        .sidebar-menu-item
+          a
+    >.sidebar-settings
+      .setting-wrap
+        i
+        a
+
+  // News Block
+  .news-block
+    .news-block-wrap
+      >.news-block-title
+        .title-wrap
+          .title
+            font-size: rem(22px)
+        .show-all-wrap
+          &:hover
+          .i-wrap
+            i
+          .btn-text
+            font-size: rem(13px)
+  .news-list-wrap
+    >.news-item
+      width: 100%
+      &:hover
+      .news-img-wrap
+        width: 100%
+        height: auto
+        &:before
+        img
+          width: 100%
+      .news-data-wrap
+        .news-title
+          .news-link
+            &:hover
+        .news-separator
+        .news-text
+        .time-view-wrap
+          >.time-view
+            >div
+              >i
+              >span
+            >.time
+            >.view
+
+  // Games Block
+  .games-block
+    .games-block-wrap
+      >.games-block-title
+        .title-wrap
+          .title
+            font-size: rem(18px)
+        .show-all-wrap
+          &:hover
+          .i-wrap
+            i
+          .btn-text
+            font-size: rem(13px)
+      >.games-list-wrap
+  .game-item
+    &:hover
+    .game-img-wrap
+      &:before
+      &:after
+      img
+    .game-info
+      .game-title-wrap
+        .title-link
+          &:hover
+      .price-wrap
+        .price
+          strong
+        .region
+  .addsense-item
+    &:before
+    &:after
+
+  // Search
+  #search
+    .search-wrap
+      i
+      span
+    &:before
+  #search-modal
+    width: 100vw
+    margin: 0
+    left: 0
+    &.active
+    >.search-modal-wrap
+      .search-title-wrap
+        #search-form
+          .search-data
+            .search-btn
+              span
+              i
+              &:hover
+            .search-input-wrap
+              .search-input
+      .search-result-wrap
+        .search-games-list
+          &.hiden-result-search
+          .search-game-item
+            .img-wrap
+              img
+            .game-title
+              a
+
+  // Footer
+  footer
+    >.footer-data-wrap
+      .icon-wrap
+        .icon
+          .logo-link
+            &:hover
+      .footer-menu-wrap
+        .footer-menu-list
+          flex-direction: column
+          .footer-menu-item
+            margin: 0
+            text-align: center
+            a
+      .footer-copyright-wrap
+        .copyright
+          i
+          span
+        .our-email
+          a
+            span
+              strong
+
+  // Article
+  #home-header
+    &.some-article
+      justify-content: flex-end
+  #header-info-wrapp
+    &.header-some-article
+      .article-info-wrap
+        .article-data-wrap
+          >span
+          .day
+          .month-year
+        .article-title-wrap
+          .article-title
+            font-size: rem(24px)
+
+  #article-wrap
+    margin-top: 6px
+    >.article-text-wrap
+      .text
+        padding: 6px 12px
+        p
+          strong
+          a
+            &:hover
+        .article-video
+          iframe
+            width: 100%
+
+  // Games page
+  #home-header
+    &.all-games
+      &:before
+      >.best-game-price
+        line-height: rem(32px)
+        .game-name
+          font-size: rem(30px)
+        .text-prod
+          font-size: rem(18px)
+      >.some-best-games-list
+        .some-best-games-item
+          .img-wrap
+            &:after
+            &:hover
+              &:after
+            img
+            .game-title
+  .games-prewie
+    .all-games-wrap
+      .show-all-games
+        width: 90%
+        height: 215px
+        &:hover
+        .icon-wrap
+          i
+        .list-type
+        .type
+      .game-item
+
+
+
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+  /**/
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+  /**/
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+  /**/
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+  /**/
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+  /**/
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+  /**/
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+  /**/

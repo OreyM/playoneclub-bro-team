@@ -1,0 +1,273 @@
+// main page sections
+.games-block
+  width: 100%
+  .games-block-wrap
+    display: flex
+    flex-direction: column
+    width: 100%
+    margin: 14px 0
+    padding: 4px 0
+    >.games-block-title
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding: 14px 0
+      .title-wrap
+        padding: 2px 0
+        .title
+          font-size: rem(28px)
+      .show-all-wrap
+        display: flex
+        align-items: center
+        color: $title-color
+        transition: all .3s
+        &:hover
+          color: $sub-color
+        .i-wrap
+          i
+            font-size: 30px
+        .btn-text
+          margin-left: 8px
+    >.games-list-wrap
+      display: flex
+      justify-content: space-between
+
+.game-item
+  display: flex
+  flex-direction: column
+  width: 264px
+  border: 4px solid $body-color
+  transition: all .3s
+  &:hover
+    border: 4px solid $sub-color
+  .game-img-wrap
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 264px
+    height: 374px
+    background-color: #757575
+    background-repeat: no-repeat
+    background-size: 100%
+    z-index: 2
+    &:before
+      content: 'Загружаю...'
+      display: flex
+      position: absolute
+      top: 0
+      justify-content: center
+      align-items: center
+      height: 100%
+      width: 100%
+      font-size: 24px
+      z-index: 0
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      background-color: #000
+      opacity: .8
+    img
+      position: relative
+      z-index: 9
+  .game-info
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 100px
+    padding: 12px 12px 16px
+    background-color: $sup-body-color
+    .game-title-wrap
+      .title-link
+        display: block
+        line-height: 24px
+        color: $title-color
+        transition: all .3s
+        &:hover
+          color: $sub-color
+    .price-wrap
+      display: flex
+      flex-direction: column
+      .price
+        font-size: rem(24px)
+        strong
+          font-size: rem(16px)
+          color: $sub-color
+      .region
+        text-align: right
+
+.addsense-item
+  position: relative
+  min-width: 264px
+  max-width: 264px
+  height: auto
+  background-color: #fff
+  border: 4px solid $body-color
+  &:before
+    content: 'А тут у нас немного рекламы...'
+    color: $title-color
+    display: flex
+    position: absolute
+    top: 0
+    justify-content: center
+    align-items: center
+    height: 100%
+    width: 100%
+    font-size: 24px
+    text-align: center
+    z-index: 2
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background-color: #000
+    opacity: .8
+    z-index: 1
+
+.games-block-separator
+  height: 2px
+  width: 57%
+  margin: 0px auto
+  margin-top: 36px
+  background-color: $sub-color
+
+#home-header
+  &.all-games
+    justify-content: flex-end
+    &:before
+      content: ""
+      background: #000
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      opacity: .4
+    >.best-game-price
+      position: relative
+      margin: 52px 0px
+      padding: 6px 6px
+      line-height: rem(60px)
+      text-align: center
+      text-shadow: 1px 3px 3px #000
+      .game-name
+        font-size: rem(52px)
+        font-weight: bold
+      .text-prod
+        font-size: rem(28px)
+        font-weight: bold
+    >.some-best-games-list
+      display: flex
+      flex-direction: row
+      margin-bottom: -2px
+      .some-best-games-item
+        position: relative
+        .img-wrap
+          position: relative
+          display: list-item
+          max-width: 480px
+          max-height: 270px
+          transition: all .3s
+          &:after
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            border: 4px solid $sup-body-color
+            opacity: .5
+            z-index: 1
+            transition: all .3s
+          &:hover
+            &:after
+              top: -2px
+              left: -2px
+              right: -2px
+              bottom: -2px
+              border-width: 6px
+              border-color: $sub-color
+              opacity: 1
+              z-index: 2
+              transition: all .3s
+          img
+            width: 100%
+          .game-title
+            position: absolute
+            left: 10px
+            bottom: 10px
+            font-size: rem(18px)
+            text-shadow: 1px 3px 3px #000
+            color: $title-color
+          .price
+            position: absolute
+            top: 30px
+            right: 22px
+            font-size: rem(32px)
+            font-weight: 700
+            color: $title-color
+            transform: rotate(8deg)
+            z-index: 1
+            &:before
+              content: ''
+              position: absolute
+              top: -8px
+              left: -8px
+              right: -8px
+              bottom: -8px
+              background-color: $sup-body-color
+              z-index: -1
+              opacity: .7
+            strong
+              color: $sub-color
+
+.games-prewie
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  margin-top: 22px
+  max-width: 1920px
+  .all-games-wrap
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    .show-all-games
+      position: relative
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 264px
+      height: 502px
+      border: 4px solid $body-color
+      background-color: $sup-body-color
+      color: $title-color
+      user-select: none
+      &:hover
+        border: 4px solid $sub-color
+      .icon-wrap
+        position: absolute
+        top: 4px
+        right: 8px
+        i
+          font-size: rem(38px)
+      .list-type
+        padding: 6px 8px
+        line-height: 40px
+        font-size: rem(30px)
+        text-align: center
+        color: $sub-color
+      .type
+        position: absolute
+        left: 6px
+        bottom: 6px
+        padding: 16px 12px
+        font-size: rem(18px)
+        line-height: 24px
+    .game-item
