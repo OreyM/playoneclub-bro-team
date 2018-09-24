@@ -477,12 +477,16 @@
         <div class="search-title-wrap">
             <form id="search-form" method="post" action="">
                 <div class="search-data">
-                    <button class="search-btn" type="submit">
-                        <span>Найти все</span>
-                        <i class="material-icons">keyboard_arrow_down</i>
-                    </button>
+                    <div class="search-btn" type="submit">
+                        <span class="hide-mobile">Найти все</span>
+                        <i class="material-icons hide-mobile">keyboard_arrow_down</i>
+                        <i class="material-icons mobile-search-icon">search</i>
+                    </div>
                     <div class="search-input-wrap">
                         <input type="search" class="search-input">
+                    </div>
+                    <div class="close-search-mobile">
+                        <i class="material-icons">close</i>
                     </div>
                 </div>
             </form>

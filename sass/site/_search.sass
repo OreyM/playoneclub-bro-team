@@ -54,13 +54,15 @@
             padding-left: 16px
             color: $title-color
             background-color: $sup-body-color
-            border-color: #fff
+            border: 1px solid #fff
             cursor: pointer
             transition: all .3s
             span
               font-size: rem(13px)
             i
               font-size: rem(30px)
+            .mobile-search-icon
+              display: none
             &:hover
               background-color: $sub-color
               color: $body-color
@@ -75,6 +77,19 @@
               padding: 2px 6px
               border: 1px solid $sup-body-color
               font-size: rem(24px)
+          .close-search-mobile
+            display: flex
+            align-items: center
+            margin: 2px 2px
+            color: $title-color
+            background-color: $sup-body-color
+            padding: 0 5px
+            border: 1px solid #fff
+            cursor: pointer
+            transition: all .3s
+            &:hover
+              background-color: $sub-color
+              color: $body-color
     .search-result-wrap
       padding: 3px
       .search-games-list

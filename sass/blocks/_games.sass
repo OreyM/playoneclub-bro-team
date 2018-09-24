@@ -271,3 +271,163 @@
         font-size: rem(18px)
         line-height: 24px
     .game-item
+
+// Some game
+@mixin before
+  content: ''
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: $sup-body-color
+  z-index: -1
+  opacity: .7
+
+#naw-wrapp
+  .user-icon-wrap
+  .menu-wrap
+    margin-left: 24px
+    .some-game-menu-list
+      display: flex
+      flex-direction: row
+      .some-game-item
+        position: relative
+        margin-left: 4px
+        .some-game-link
+          position: relative
+          padding: 14px 16px
+          user-select: none
+          color: $title-color
+          z-index: 1
+          transition: all .3s
+          &:before
+            @include before
+          &:hover
+            color: $sub-color
+  .other-nav-data-wrap
+    #game-search
+      .some-game-search-wrap
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 10px 16px
+        user-select: none
+        &:before
+          @include before
+        color: $title-color
+
+#home-header
+  #header-info-wrapp
+    &.some-game
+      .game-img-wrap
+        box-shadow: none
+        border: none
+        .game-img
+      .info-wrap
+        justify-content: flex-start
+        width: 100%
+        margin-left: 46px
+        .discount-type-wrap
+          display: flex
+          flex-direction: row
+          span
+            margin-right: 32px
+            font-size: rem(18px)
+          .discount
+          .type
+          .free
+        .title-wrap
+          padding: 4px 0px
+          margin: 16px 0
+          .game-title
+            font-size: rem(52px)
+        .price-wrap
+          margin: 12px 0
+          padding: 4px 0
+          .price
+            font-size: rem(36px)
+            strong
+              font-weight: bold
+              color: $sub-color
+        .country-wrap
+          margin: 12px 0
+          padding: 4px 0
+          .country
+            strong
+              font-size: 22px
+              color: $sub-color
+#some-game-data
+  margin-top: 32px
+  .some-block
+    display: flex
+    flex-direction: row
+    width: 100%
+    .block
+      margin: 0 4px
+      .title
+        strong
+          font-size: rem(22px)
+          font-weight: bold
+      .data
+        margin: 12px 0
+        padding: 22px 32px
+        background-color: $sup-body-color
+        p
+          margin: 11px 0
+          font-family: 'Roboto Thin', sans-serif
+          line-height: rem(22px)
+          strong
+            font-family: 'Roboto Black', sans-serif
+          &:first-child
+            margin-top: 0
+          &:last-child
+            margin-bottom: 0
+        ul
+          margin-left: 16px
+          li
+            font-family: 'Roboto Thin', sans-serif
+            line-height: rem(22px)
+            list-style: disc
+        table
+          th,td
+            padding: 6px 14px
+          th:last-child
+            border-left: 1px solid $sup-body-color
+          td:last-child
+            border-left: 1px solid $sub-color
+          th
+            color: $sup-body-color
+            font-weight: bold
+          tr:nth-child(2n)
+            background-color: #333
+          thead
+            background: $sub-color
+      &.description
+      &.other-price
+        min-width: 26%
+        .data
+          display: flex
+          justify-content: center
+      &.carusel
+        width: 100%
+        .data
+          .carousel-wrap
+            .owl-carousel
+              .carousel-item
+                img
+                  width: 100%
+      &.information
+        .data
+          .sub-data
+            margin-bottom: 22px
+            .multiplayer
+              display: flex
+              flex-direction: column
+              span
+                padding: 2px 0
+      &.recomendate-games
+        width: 100%
+        .games-carousel-wrap
+          margin-top: 12px
