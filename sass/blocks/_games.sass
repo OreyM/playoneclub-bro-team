@@ -272,6 +272,29 @@
         line-height: 24px
     .game-item
 
+// All Games
+#all-games-wrap
+  margin-top: 100px
+  .games-block-wrap
+    display: flex
+    flex-direction: column
+    width: 100%
+    margin-top: 14px
+    padding: 4px 0
+    .games-block-title
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding: 14px 0
+      .title-wrap
+        padding: 2px 0
+        .title
+          font-size: 1.75rem
+    .games-block-list
+      display: flex
+      justify-content: space-around
+      flex-wrap: wrap
+
 // Some game
 @mixin before
   content: ''
@@ -293,7 +316,7 @@
       flex-direction: row
       .some-game-item
         position: relative
-        margin-left: 4px
+        margin-left: 8px
         .some-game-link
           position: relative
           padding: 14px 16px
