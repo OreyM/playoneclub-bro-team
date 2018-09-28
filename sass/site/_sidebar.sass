@@ -16,45 +16,48 @@
     height: 2px
     background-color: $body-color
     margin: 12px 14px 12px 14px
-  >.sidebar-title
-    padding: 22px 14px 0px 14px
-    span
-      font-size: 32px
-      font-weight: bold
-      color: $title-color
-  >.my-profile-wrap
-    margin: 16px 0
-    padding: 8px 14px
-    background-color: $sub-color
-    .user-name
-      padding-bottom: 6px
-      span
-        font-size: rem(20px)
-        font-weight: bold
-        color: $title-color
-    .user-nick
+  >.user-account
+    margin: 12px 18px
+    padding: 16px 6px
+    .user-icon-wrap
       display: flex
       align-items: center
-      .user-img
-        width: 70px
-        height: 70px
-        border: 3px solid #fff
+      .user-icon
+        display: block
+        width: 72px
+        height: 72px
+        background-color: #e0e0e0
+        border: 2px solid $sub-color
         border-radius: 50%
-        overflow: hidden
+        box-shadow: 0px 0px 8px 1px $sub-color
+        transition: all .5s
+        &:hover
+          box-shadow: 0px 0px 8px 3px $sub-color
         img
           width: 100%
-      .user-nick-wrap
-        margin: 0 12px
-        span
-          font-size: rem(20px)
-          color: $title-color
-  >.profile-exit
-    text-align: right
-    padding: 0 14px
-    .exit-btn
-      font-size: rem(20px)
-      color: $title-color
-      @include animationLink($sub-color, .3s, 8px, 2px)
+          overflow: hidden
+          border-radius: 50%
+      .user-info-wrap
+        padding: 0 12px
+        .user-name
+          margin-bottom: 4px
+        .user-data
+          margin-top: 6px
+          .user-respect
+            display: flex
+            align-items: center
+            font-size: rem(18px)
+            &.good-respect
+              color: #64dd17
+            &.bad-respect
+              color: #d50000
+            i
+              font-size: rem(22px)
+            strong
+              display: inline-block
+              padding: 0 6px
+              font-size: rem(18px)
+              color: $menu-color
   >.mobile-site-menu
     display: none
     padding: 0 14px

@@ -162,7 +162,7 @@
   //Menu navigation
   #naw-wrapp
     padding: 16px 0
-    justify-content: center
+    justify-content: space-between
     .user-icon-wrap
       .user-icon
         &:hover
@@ -204,15 +204,25 @@
       .info-wrap
         visibility: hidden
         display: none
-        .title-wrap
-          .offer-title
-          .offer-sub-title
-        .simple-info-wrap
-          .item-info-wrap
-            .img-wrap
-              img
-            .simple-title-wrap
-              a
+        &.show-mobile
+          visibility: visible
+          display: flex
+          margin-left: 0
+          .discount-type-wrap
+            display: none
+          .title-wrap
+            margin: 12px 0
+            text-align: center
+            .game-title
+              font-size: rem(22px)
+          .price-wrap
+            margin: 12px 0
+            .price
+              font-size: rem(25px)
+          .country-wrap
+            margin: 12px 0
+            text-align: right
+
   // Sidebar
   #sidebar-menu
     width: 84vw
@@ -309,6 +319,11 @@
   .addsense-item
     &:before
     &:after
+
+  #some-game-data
+    .some-block
+      &.mobile-column
+        flex-direction: column-reverse
 
   // Search
   #search
